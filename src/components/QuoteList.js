@@ -21,11 +21,12 @@ export default function QuoteList() {
     <div>
       Quote list
       {quotes.map((quote) => (
-        <ul key={quote.quote}>
-          <li>
+        <div key={quote.quote}>
+          <p>
             {quote.character} - "{quote.quote}"
-          </li>
-        </ul>
+          </p>
+          <img src={quote.image} />
+        </div>
       ))}
     </div>
   );
