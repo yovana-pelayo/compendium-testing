@@ -13,7 +13,9 @@ export default function QuoteList() {
       const data = await getQuotes();
 
       setQuotes(data);
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 700);
     };
     fetchData();
   }, []);
@@ -26,7 +28,7 @@ export default function QuoteList() {
       )
     );
   };
-  if (loading) return <div>Loading</div>;
+  if (loading) return <div style={{ color: 'green' }}>LOADING</div>;
 
   return (
     <>
@@ -34,11 +36,11 @@ export default function QuoteList() {
         <CharacterDropDown onChange={filterQuotesByName} />
 
         {(filteredQ.length ? filteredQ : quotes).map((quote) => (
-          <ul key={quote.quote} style={{ color: 'white' }}>
-            <li style={{ color: 'white' }}>
+          <ul key={quote.quote} style={{ color: 'green' }}>
+            <li style={{ color: 'green' }}>
               {quote.character} - "{quote.quote}"
             </li>
-            <img src={quote.image} height="80" />
+            <img src={quote.image} height="80" border="2px solid " />
           </ul>
         ))}
       </div>

@@ -5,7 +5,7 @@ export default function App() {
     <div style={{ backgroundColor: 'black', height: '100vh' }}>
       <h1 style={{ color: 'green' }}>Futurama Page</h1>
 
-      <Home style={{ color: 'white' }} />
+      <Home style={{ color: 'green' }} />
     </div>
   );
 }
