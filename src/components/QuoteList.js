@@ -27,14 +27,15 @@ export default function QuoteList() {
     );
   };
   if (loading) return <div>Loading</div>;
+
   return (
     <>
       <div>
         <CharacterDropDown onChange={filterQuotesByName} />
 
         {(filteredQ.length ? filteredQ : quotes).map((quote) => (
-          <ul key={quote.quote}>
-            <li>
+          <ul key={quote.quote} style={{ color: 'white' }}>
+            <li style={{ color: 'white' }}>
               {quote.character} - "{quote.quote}"
             </li>
             <img src={quote.image} height="80" />

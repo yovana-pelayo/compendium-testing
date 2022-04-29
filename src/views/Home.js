@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import QuoteList from '../components/QuoteList';
-import CharacterDropDown from '../components/CharacterDropDown';
-
 export default function Home() {
   const [character, setCharacter] = useState('');
   const [quotes, setQuotes] = useState([]);
@@ -20,7 +18,7 @@ export default function Home() {
   // };
 
   return (
-    <div>
+    <div className="home-page2">
       {/* Home Page is up G{filterQuotesByName().map((quotes) => (
 
         )} */}

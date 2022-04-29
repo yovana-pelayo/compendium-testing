@@ -3,7 +3,11 @@ export default function CharacterDropDown({ onChange }) {
     onChange(e.target.value);
   };
   return (
-    <select className="quote-by-character" onChange={handleChange}>
+    <select
+      className="quote-by-character"
+      onChange={handleChange}
+      style={{ backgroundColor: 'green' }}
+    >
       <option value="All">All</option>
       <option value="Bender">Bender</option>
       <option value="Dr Zoidberg">Dr Zoidberg</option>
