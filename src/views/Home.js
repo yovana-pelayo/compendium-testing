@@ -1,15 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import QuoteList from '../components/QuoteList';
-import Search from '../components/CharacterDropDown';
 import CharacterDropDown from '../components/CharacterDropDown';
 
 export default function Home() {
-  const [characters, setCharacters] = useState([]);
-  //   const [selectedCharacters, setSelectedCharacters] = useState([]);
+  const [character, setCharacter] = useState('');
+  const [quotes, setQuotes] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await getQuotes();
+  //     setQuotes(data);
+  //   };
+  //   fetchData();
+  // }, []);
+  // const filterQuotesByName = () => {
+  //   return characters.filter(
+  //     (character) => character.character === character || character === 'All'
+  //   );
+  // };
+
   return (
     <div>
-      Home Page is up G
-      <CharacterDropDown callback={setCharacters} />
+      {/* Home Page is up G{filterQuotesByName().map((quotes) => (
+
+        )} */}
       <QuoteList />
     </div>
   );
