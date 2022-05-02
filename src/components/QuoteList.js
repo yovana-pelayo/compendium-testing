@@ -11,7 +11,6 @@ export default function QuoteList() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await getQuotes();
-
       setQuotes(data);
       setTimeout(() => {
         setLoading(false);
@@ -28,7 +27,7 @@ export default function QuoteList() {
       )
     );
   };
-  if (loading) return <div style={{ color: 'green' }}>LOADING</div>;
+  if (loading) return <div style={{ color: 'green' }}>LOADING...</div>;
 
   return (
     <>
@@ -36,11 +35,16 @@ export default function QuoteList() {
         <CharacterDropDown onChange={filterQuotesByName} />
 
         {(filteredQ.length ? filteredQ : quotes).map((quote) => (
-          <ul key={quote.quote} style={{ color: 'green' }}>
+          <ul key={quote.quote} style={{ color: 'green' }} arial-label="quote">
             <li style={{ color: 'green' }}>
               {quote.character} - "{quote.quote}"
             </li>
-            <img src={quote.image} height="80" border="2px solid " />
+            <img
+              src={quote.image}
+              height="80"
+              border="2px solid "
+              alt="character-image"
+            />
           </ul>
         ))}
       </div>
