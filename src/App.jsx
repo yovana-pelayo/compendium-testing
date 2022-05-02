@@ -1,3 +1,14 @@
+import Home from './views/Home';
+import React from 'react';
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <div style={{ backgroundColor: 'black', height: '100vh' }}>
+      <h1 aria-label="header" style={{ color: 'green' }}>
+        Futurama Page
+      </h1>
+
+      <Home style={{ color: 'green' }} />
+    </div>
+  );
 }
